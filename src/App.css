@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.container {
+  min-height: 100vh;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0px;
+}
+.app {
+  width: 450px;
+  padding: 50px 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  padding: 35px;
+}
+
+.input-field {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  transition: box-shadow 0.3s ease; /* Add a transition for animation */
+}
+
+.input-field:focus {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Change box shadow on focus */
+}
+.heading {
+  text-align: center;
+  font-size: 2.2rem;
+  color: black;
+  background-image: url("https://images.pexels.com/photos/8040961/pexels-photo-8040961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); /* Replace 'your-image.jpg' with your actual image path */
+  background-size: cover;
+  -webkit-background-clip: text; /* Use WebKit prefix for compatibility */
+  background-clip: text;
+  color: transparent; /* Hide the original text */
+}
+.balance {
+  margin-top: 50px;
+}
+.balance p {
+  font-weight: 700;
+  margin-bottom: 0;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+.balance h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+.income-container {
+  display: flex;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  margin: 20px 0;
+  padding: 20px 0;
+  border-color: #2ecc71;
+}
+.income,
+.expense {
+  flex: 1;
+  text-transform: uppercase;
+  text-align: center;
+}
+.income p,
+.expense p {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.income h5,
+.expense h5 {
+  margin: 5px 0;
+  font-weight: 700;
+  font-size: 16px;
+}
+.income {
+  border-right: 1px solid #dedede;
+}
+.income h5 {
+  color: #2ecc71;
+}
+.expense h5 {
+  color: #c0392b;
+}
+.history {
+  margin: 15px 0 0;
+}
+
+.text {
+  font-size: 1.2rem;
+}
+.history h4,
+.transaction h4 {
+  padding: 10px 0;
+  border-bottom: 1px solid #bbb;
+  font-size: 1.2rem;
+}
+.details {
+  padding: 5px 0;
+}
+.single-details {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 7px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  background: white;
+  margin: 10px 0;
+}
+.plus {
+  border-right: 5px solid #2ecc71;
+}
+.minus {
+  border-right: 5px solid #c0392b;
+}
+label {
+  display: block;
+  margin: 10px 0;
+  font-weight: 600;
+  font-size: 14px;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  color: black;
+  outline: none;
+}
+input:focus {
+  outline-color: lightslategrey;
+}
+.transaction-btn button {
+  color: white;
+  background-color: black;
+  cursor: pointer;
+  width: 100%;
+  margin: 10px 0 30px;
+  border: none;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.amountindiv {
+  font-size: 2rem;
+}
+
+.buttons:hover {
+  background-color: lightseagreen;
+}
+.del-btn {
+  padding: 5px;
+  background: black;
+  font-size: 16px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+.li {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.li:hover .del-btn {
+  display: block;
+}
+
+/* Inside your CSS file or component */
+/* WebKit (Chrome, Safari, Opera) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3498db; /* Color of the thumb */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #2980b9; /* Color of the thumb on hover */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ecf0f1; /* Color of the track */
+  border-radius: 8px;
+}
+
+/* Firefox */
+/* Note: Firefox currently doesn't support styling the scrollbar-thumb directly */
+* {
+  scrollbar-color: #3498db #ecf0f1; /* thumb color, track color */
+}
+
+/* Optionally, you can add a transition effect for a smoother appearance */
+/* Uncomment the following lines if you want to add a transition effect */
+/*
+::-webkit-scrollbar-thumb {
+  transition: background-color 0.3s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  transition: background-color 0.3s ease-in-out;
+}
+*/
+
+/* Example of scrollbar width adjustment for Firefox */
+/* Adjust the width according to your preference */
+/*
+* {
+  scrollbar-width: thin;
+}
+*/
